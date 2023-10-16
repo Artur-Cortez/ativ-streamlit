@@ -1,0 +1,20 @@
+[
+    {
+        "_Cliente__id": 1,
+        "_Cliente__nome": "najuia",
+        "_Cliente__email": "sss",
+        "_Cliente__fone": "333"
+    },
+    {
+        "_Cliente__id": 2,
+        "_Cliente__nome": "joao",
+        "_Cliente__email": "afdf",
+        "_Cliente__fone": "3424234"
+    },
+    {
+        "_Cliente__id": 3,
+        "_Cliente__nome": "sasami",
+        "_Cliente__email": "ssf@gmail.com",
+        "_Cliente__fone": "91313-1313"
+    }
+]
