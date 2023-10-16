@@ -12,5 +12,10 @@ class Cliente:
   def get_email(self): return self.__email
   def get_fone(self): return self.__fone
 
+  def __eq__(self, o: object):
+      if self.__id == o.__id and self.__nome == o.__nome and self.__email == o.__email and self.__fone == o.__fone:
+        return True
+      return False
+
   def __str__(self):
     return f'\nID: {self.__id}\nNome: {self.__nome}\nEmail: {self.__email}\nTelefone: {self.__fone}'

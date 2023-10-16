@@ -2,8 +2,8 @@
     {
         "_Cliente__id": 1,
         "_Cliente__nome": "najuia",
-        "_Cliente__email": "sss",
-        "_Cliente__fone": "333"
+        "_Cliente__email": "xande@gmail.com",
+        "_Cliente__fone": "43523525"
     },
     {
         "_Cliente__id": 2,
@@ -16,5 +16,29 @@
         "_Cliente__nome": "sasami",
         "_Cliente__email": "ssf@gmail.com",
         "_Cliente__fone": "91313-1313"
+    },
+    {
+        "_Cliente__id": 4,
+        "_Cliente__nome": "bia",
+        "_Cliente__email": "sss",
+        "_Cliente__fone": "seee"
+    },
+    {
+        "_Cliente__id": 5,
+        "_Cliente__nome": "rrr",
+        "_Cliente__email": "sadasd",
+        "_Cliente__fone": "343435"
+    },
+    {
+        "_Cliente__id": 6,
+        "_Cliente__nome": "rrr",
+        "_Cliente__email": "xande@gmail.com",
+        "_Cliente__fone": "43523525"
+    },
+    {
+        "_Cliente__id": 7,
+        "_Cliente__nome": "rrr",
+        "_Cliente__email": "josefine@gmail.com",
+        "_Cliente__fone": "12345-6789"
     }
 ]

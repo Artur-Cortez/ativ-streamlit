@@ -40,43 +40,25 @@ class ManterClienteUI:
     def Atualizar(cls):
         with cls.tab3:
             clientes = View.ClienteListar()
-            opcoes_clientes = [f"ID: {c.get_id()} Nome: {c.get_nome()} Email: {c.get_email()} Telefone: {c.get_fone()}" for c in clientes]
             
-            chave_unica = hash("seu_identificador_unico_aqui")
-            cliente_selecionado = st.selectbox("Atualização de clientes", opcoes_clientes, key=chave_unica)
+            opcoes = st.selectbox("Atualização de clientes", clientes)
 
             nome = st.text_input("Informe o novo nome")
             email = st.text_input("Informe o novo email")
             fone = st.text_input("Informe o novo fone")
             atualizar = st.button("Atualizar")
 
-            if cliente_selecionado:
-                id_cliente_selecionado = int(cliente_selecionado.split("ID: ")[1].split(" ")[0])
-
-                if atualizar:
-                    c = None
-                    for cliente in clientes:
-                        if cliente.get_id() == id_cliente_selecionado:
-                            c = cliente
-                    if c:
-                        
-                        View.ClienteAtualizar(c.get_id(), nome, email, fone)
+            if atualizar:   
+                st.write(nome)
+                View.ClienteAtualizar(opcoes.get_id(), nome, email, fone)
 
     @classmethod
     def Excluir(cls):
         with cls.tab4:
             clientes = View.ClienteListar()
-            opcoes_clientes = [f"ID: {c.get_id()} Nome: {c.get_nome()} Email: {c.get_email()} Telefone: {c.get_fone()}" for c in clientes]
-            c_s = st.selectbox("Atualização de clientes", opcoes_clientes)
+            
+            opcoes = st.selectbox("Atualização de clientes", clientes)
             excluir = st.button("Excluir")
             
-            if c_s:
-                id_cliente_selecionado = int(c_s.split("ID: ")[1].split(" ")[0])
-
-                if excluir:
-                    c = None
-                    for cliente in clientes:
-                        if cliente.get_id() == id_cliente_selecionado:
-                            c = cliente
-                    if c:
-                        View.ClienteExcluir(c.get_id())
+            if excluir:
+                View.ClienteExcluir(opcoes.get_id())

@@ -13,7 +13,8 @@ class NCliente:
         
     c.set_id(id+1)
    
-    cls.__clientes.append(c)    
+    cls.__clientes.append(c)
+    cls.salvar()   
     
   @classmethod
   def listar_id(cls, id):
@@ -23,11 +24,13 @@ class NCliente:
         
   @classmethod
   def listar(cls):
+    cls.abrir()
     # print('-----LISTA CLIENTES-----\n')
     return cls.__clientes
       
   @classmethod
   def atualizar(cls, id, nome='', email='', fone=''):
+    cls.abrir()
     c = cls.listar_id(id)
     
     if nome == '': pass      
@@ -42,10 +45,14 @@ class NCliente:
     else:
       c.set_fone(fone)
 
+    cls.salvar()
+    
+
   @classmethod        
   def excluir(cls, id):
     c = cls.listar_id(id)
     cls.__clientes.remove(c)    
+    cls.salvar()
 
   @classmethod
   def salvar(cls):
