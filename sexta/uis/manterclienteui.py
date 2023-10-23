@@ -1,8 +1,7 @@
 import streamlit as st
-from view import View
+from views import View
 import pandas as pd
-from cliente import Cliente
-from ncliente import NCliente
+
 
 class ManterClienteUI:
 

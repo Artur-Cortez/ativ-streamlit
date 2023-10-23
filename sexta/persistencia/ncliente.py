@@ -1,5 +1,5 @@
 import json
-from cliente import Cliente
+from models.cliente import Cliente
 
 class NCliente: 
   __clientes = [] #lista de dicionarios
@@ -29,28 +29,21 @@ class NCliente:
     return cls.__clientes
       
   @classmethod
-  def atualizar(cls, id, nome='', email='', fone=''):
+  def atualizar(cls, obj):
     cls.abrir()
-    c = cls.listar_id(id)
+    c = cls.listar_id(obj.get_id())
     
-    if nome == '': pass      
-    else: 
-      c.set_nome(nome)
-      
-    if email == '': pass
-    else:
-      c.set_email(email)
-      
-    if fone == '': pass
-    else:
-      c.set_fone(fone)
+    if c is not None:
+      c.set_nome(obj.get_nome())
+      c.set_email(obj.get_email())
+      c.set_fone(obj.get_fone())
 
     cls.salvar()
     
 
   @classmethod        
-  def excluir(cls, id):
-    c = cls.listar_id(id)
+  def excluir(cls, obj):
+    c = cls.listar_id(obj.get_id())
     cls.__clientes.remove(c)    
     cls.salvar()
 
