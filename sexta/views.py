@@ -1,10 +1,10 @@
 from persistencia.ncliente import NCliente
-from sexta.persistencia.nservico import NServico
+from persistencia.nservico import NServico
 from persistencia.nhorario import NHorario
 
 from models.cliente import Cliente
 from models.servico import Servico
-from sexta.models.horario import Horario
+from models.horario import Horario
 
 
 class View:
